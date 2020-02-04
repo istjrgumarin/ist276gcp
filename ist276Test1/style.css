@@ -34,16 +34,16 @@
 }
 
 .blinking{
-    animation:blinkingText 1.2s infinite;
+    animation:blinkingTextmint 1.2s infinite;
 }
 @keyframes blinkingText{
     0%{     color: #000;    }
     100%{   color: #FFFF66;    }
 }
 
-@keyframes blinkingTextred{
+@keyframes blinkingTextmint{
     0%{     color: #000;    }
-    100%{   color: crimson;    }
+    100%{   color: #AAF0D1;    }
 }
 
 @keyframes example {
@@ -55,8 +55,19 @@ hr {
 	border-top: 1px solid red;
 }
 
+#idex {
+  color: #FF355E;
+  font-weight:bold;
+}
+
+
+.classex {
+  color: #AAF0D1;
+  font-weight:bold;
+}
+
 a {
-  color: hotpink;
+	color: hotpink
 }
 
 body {
@@ -65,7 +76,7 @@ body {
   url('nightcity.gif');
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-size:2000px 6000px;
+  background-size:2000px 4000px;
   
 }
 
@@ -120,7 +131,21 @@ h2 {
 }
 
 
+h5 {
+  color: #FF355E;
+  text-align: center;
+  font-family: 'Elianto-Regular';
+  font-size:30px;
+}
 
+/*
+blockquote {
+  color: violet;
+  text-align: center;
+  font-family: verdana;
+  font-size:30px;
+}
+*/
 p {
   color: #FFFF66;
   font-family: verdana;
