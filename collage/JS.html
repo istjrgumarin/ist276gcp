@@ -1,0 +1,68 @@
+<script>
+
+document.write('<body id="myBody">');
+
+var pics = ["box.gif","boxing.gif","drone.gif","deagle.gif","bike.gif", "biking.gif","chess.gif","seoul.jpg","chiner.jpg","wick.gif","ny.jpg","nightcity.gif","beachy.png"];
+var colors = ["#FFFF66","#FF355E","#50BFR6", "crimson", "violet", "cyan"];
+var borders = ["solid","dotted","dashed","double","groove","ridge","inset","outset"];
+
+var whichPic = Math.floor((Math.random() * pics.length) + 0);
+var whichColor = Math.floor((Math.random() * colors.length) + 0);
+var whichBorder = Math.floor((Math.random() * borders.length) + 0);
+
+/*var cyberpunk = new FontFace('Cyberpunk', 'url(cyberpunk/Cyberpunk.ttf)');
+cyberpunk.load().then(function(loaded_face) {
+	document.fonts.add(loaded_face);
+  	document.body.style.fontFamily = '"Cyberpunk"'';
+}).catch(function(error) {
+	// error occurred
+});*/
+//import myfont from 'cyberpunk/Cyberpunk.ttf';
+
+/*
+document.createElement('style');
+var css = document.createElement('style');
+@font-face {
+  font-family: 'Cyberpunk';
+	font-style: normal;
+	font-weight: normal;
+  src: local('cyberpunk'), url('Cyberpunk.ttf') format('truetype');
+}
+*/
+///////////////////////////////////////////////////////////////////////////////////////////////////
+function randVal (min,max)
+{
+  return (min + Math.floor (Math.random()*(max-min+1)));
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////
+function makeDiv()
+{
+  whichPic = Math.floor((Math.random() * 11) + 0);
+  whichColor = Math.floor((Math.random() * colors.length) + 0);
+  whichBorder = Math.floor((Math.random() * borders.length) + 0);
+  document.write("<div style=\"border-style:" +borders[whichBorder] + "; border-color:" + colors[whichColor] + "; position:absolute; border-width:10px; right:"+ randVal(200,1200) +"px;top:"+ randVal(100,800)+"px \"><img src = \"" + pics[whichPic] + "\"width="+randVal(50,300)+"px;></div>");
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////
+function makeHeader()
+{
+  document.write("<heading id='myHeader'>My name is JR Gumarin, and I like Boxing, Biking, Chess, Photography, Drones, and Guns!</heading>");
+  var heading = document.getElementById("myHeader");
+  whichColor = Math.floor((Math.random() * colors.length) + 0);
+  heading.style.color = colors[whichColor];
+  heading.style.fontFamily = '"Courier New", Courier, monospace';
+  heading.style.fontSize = "50px";
+  heading.style.borderStyle = "double";
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////
+document.body.style.backgroundImage = "url('beachy.png')";
+makeHeader();
+makeDiv();
+var num = window.prompt("How many pictures do you want?");
+///////////////////////////////////////////////////////////////////////////////////////////////////
+for (i=0; i < num; i++)
+{
+  makeDiv();
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////
+document.write('</body>');
+</script>
